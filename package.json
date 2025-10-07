@@ -26,15 +26,16 @@
     "prompts": "^2.4.2",
     "tar": "^6.1.11",
     "update-check": "^1.5.4",
-    "validate-npm-package-name": "^3.0.0"
+    "validate-npm-package-name": "^3.0.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.3",
+    "@commitlint/cli": "^17.0.0",
     "@commitlint/config-conventional": "^16.2.4",
-    "@commitlint/config-lerna-scopes": "^16.2.4",
+    "@commitlint/config-lerna-scopes": "^17.6.6",
     "@jest/globals": "^29",
-    "@octokit/request": "^5.6.3",
-    "@trivago/prettier-plugin-sort-imports": "^3.4.0",
+    "@octokit/request": "^8.4.1",
+    "@trivago/prettier-plugin-sort-imports": "^4.2.1",
     "@types/cross-spawn": "^6.0.3",
     "@types/fs-extra": "^9.0.13",
     "@types/got": "9.6.12",
@@ -48,19 +49,19 @@
     "@vercel/ncc": "^0.33.4",
     "commitizen": "^4.3.0",
     "copyfiles": "^2.4.1",
-    "cross-spawn": "^7.0.3",
+    "cross-spawn": "^7.0.5",
     "dir-compare": "^4.2.0",
-    "eslint": "^8.50.0",
+    "eslint": "^9.1.0",
     "eslint-config-prettier": "^8.10.0",
     "husky": "^7.0.4",
     "jest": "^29",
     "jest-when": "^3.6.0",
-    "lerna": "^4.0.0",
+    "lerna": "^8.1.5",
     "lint-staged": "^12.5.0",
     "pinst": "^3.0.0",
     "prettier": "^2.8.8",
-    "shx": "^0.3.4",
-    "tempy": "1.0.1",
+    "shx": "^0.4.0",
+    "tempy": "3.0.0",
     "ts-jest": "^29",
     "ts-node": "^10.9.1",
     "typescript": "~4.6.4"
@@ -104,6 +105,9 @@
     "test": "yarn run test:unit && yarn run test:integration",
     "test:integration": "jest test/integration",
     "test:unit": "jest test/unit",
-    "watch": "ncc build ./src/index.ts --out dist/ --watch"
-  }
+    "watch": "ncc build ./src/index.ts --out dist/ --watch",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "snyk": true
 }
