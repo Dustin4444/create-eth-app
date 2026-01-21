@@ -24,7 +24,7 @@
     "handlebars": "^4.7.7",
     "promisepipe": "^3.0.0",
     "prompts": "^2.4.2",
-    "tar": "^6.1.11",
+    "tar": "^7.5.4",
     "update-check": "^1.5.4",
     "validate-npm-package-name": "^3.0.0"
   },
@@ -55,7 +55,7 @@
     "husky": "^7.0.4",
     "jest": "^29",
     "jest-when": "^3.6.0",
-    "lerna": "^4.0.0",
+    "lerna": "^6.5.0",
     "lint-staged": "^12.5.0",
     "pinst": "^3.0.0",
     "prettier": "^2.8.8",
